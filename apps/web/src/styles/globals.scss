@@ -1,0 +1,29 @@
+@import "base";
+
+::selection {
+	color: var(--color-background-100);
+	background-color: var(--color-primary);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+
+	display: flex;
+	overflow: clip;
+	flex-direction: column;
+
+	text-wrap: balance;
+
+	color: var(--color-text-0);
+
+	font: var(--text-def);
+	fill: currentColor;
+
+	@media (width <= 768px) {
+		font: var(--text-def-mobile);
+	}
+}

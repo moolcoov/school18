@@ -1,0 +1,12 @@
+{
+	"extends": ["stylelint-config-standard-scss", "stylelint-order-config-standard", "stylelint-config-prettier-scss"],
+	"plugins": ["stylelint-order"],
+	"rules": {
+		"indentation": "tab",
+		"color-hex-length": "long",
+		"value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
+		"at-rule-no-unknown": null,
+		"declaration-block-trailing-semicolon": null,
+		"no-descending-specificity": null
+	}
+}

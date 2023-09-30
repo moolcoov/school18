@@ -1,0 +1,27 @@
+@mixin dark {
+	color-scheme: dark;
+	@include dark-colors;
+}
+
+@mixin light {
+	color-scheme: light;
+	@include light-colors;
+}
+
+[data-theme="dark"] {
+	@include dark;
+}
+
+[data-theme="light"] {
+	@include light;
+}
+
+[data-theme="auto"] {
+	@media (prefers-color-scheme: dark) {
+		@include dark;
+	}
+
+	@media (prefers-color-scheme: light) {
+		@include light;
+	}
+}

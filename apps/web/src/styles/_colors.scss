@@ -1,0 +1,158 @@
+@use "sass:color";
+
+:root {
+	// marks
+	--color-mark-great: #10c300;
+	--color-mark-good: #83d300;
+	--color-mark-ok: #d2a400;
+	--color-mark-bad: #fe2b17;
+
+	// gradients
+	--color-gradient-blue: linear-gradient(90deg, #22a3ff 0%, #00dcea 100%);
+	--color-gradient-violet: linear-gradient(90deg, #916aff 0%, #e230ff 100%);
+	--color-gradient-orange: linear-gradient(90deg, #ff5656 -1.02%, #ffae11 100%);
+
+	// carbonado
+	--color-hue-carborado-0: #f7f7f7;
+	--color-hue-carborado-50: #f0f0f0;
+	--color-hue-carborado-100: #e7e7e7;
+	--color-hue-carborado-150: #e0e0e0;
+	--color-hue-carborado-200: #cccccc;
+	--color-hue-carborado-300: #b3b3b3;
+	--color-hue-carborado-400: #999999;
+	--color-hue-carborado-500: #808080;
+	--color-hue-carborado-600: #666666;
+	--color-hue-carborado-700: #4d4d4d;
+	--color-hue-carborado-800: #333333;
+	--color-hue-carborado-850: #1f1f1f;
+	--color-hue-carborado-900: #171717;
+	--color-hue-carborado-950: #0f0f0f;
+	--color-hue-carborado-1000: #000000;
+
+	// ruby
+	--color-hue-ruby-0: #ffd6bf;
+	--color-hue-ruby-100: #ffba99;
+	--color-hue-ruby-200: #ff9b73;
+	--color-hue-ruby-300: #ff794c;
+	--color-hue-ruby-400: #ff5526;
+	--color-hue-ruby-500: #ff2e00;
+	--color-hue-ruby-600: #d91f00;
+	--color-hue-ruby-700: #b31300;
+	--color-hue-ruby-800: #8c0a00;
+	--color-hue-ruby-900: #660400;
+	--color-hue-ruby-1000: #400000;
+
+	// topaz
+	--color-hue-topaz-0: #fff8bf;
+	--color-hue-topaz-100: #fff199;
+	--color-hue-topaz-200: #ffe673;
+	--color-hue-topaz-300: #ffd94d;
+	--color-hue-topaz-400: #ffc926;
+	--color-hue-topaz-500: #ffb600;
+	--color-hue-topaz-600: #d89300;
+	--color-hue-topaz-700: #b37300;
+	--color-hue-topaz-800: #8c5500;
+	--color-hue-topaz-900: #663a00;
+	--color-hue-topaz-1000: #402200;
+
+	// emerald
+	--color-hue-emerald-0: #f6ffbf;
+	--color-hue-emerald-100: #deff99;
+	--color-hue-emerald-200: #baff73;
+	--color-hue-emerald-300: #87ff4d;
+	--color-hue-emerald-400: #48ff26;
+	--color-hue-emerald-500: #00ff05;
+	--color-hue-emerald-600: #00d92a;
+	--color-hue-emerald-700: #00b342;
+	--color-hue-emerald-800: #008c4c;
+	--color-hue-emerald-900: #006649;
+	--color-hue-emerald-1000: #004039;
+
+	// sapphire
+	--color-hue-sapphire-0: #c0ffdf;
+	--color-hue-sapphire-100: #99ffde;
+	--color-hue-sapphire-200: #73ffec;
+	--color-hue-sapphire-300: #4df7ff;
+	--color-hue-sapphire-400: #26cdff;
+	--color-hue-sapphire-500: #0095ff;
+	--color-hue-sapphire-600: #0066ff;
+	--color-hue-sapphire-700: #002dcf;
+	--color-hue-sapphire-800: #00059f;
+	--color-hue-sapphire-900: #110070;
+	--color-hue-sapphire-1000: #150040;
+
+	// amethyst
+	--color-hue-amethyst-0: #d6bfff;
+	--color-hue-amethyst-100: #c699ff;
+	--color-hue-amethyst-200: #bc73ff;
+	--color-hue-amethyst-300: #b74dff;
+	--color-hue-amethyst-400: #b926ff;
+	--color-hue-amethyst-500: #c000ff;
+	--color-hue-amethyst-600: #b400d9;
+	--color-hue-amethyst-700: #a200b3;
+	--color-hue-amethyst-800: #8a008c;
+	--color-hue-amethyst-900: #660060;
+	--color-hue-amethyst-1000: #400037;
+}
+
+@mixin dark-colors {
+	// Primary
+	--color-primary: #05c4ea;
+	--color-primary-dark: #05abd2;
+	--color-primary-light: #00dcff;
+
+	// Text
+	--color-text-0: var(--color-hue-carborado-0);
+	--color-text-100: var(--color-hue-carborado-300);
+	--color-text-200: var(--color-hue-carborado-400);
+	--color-text-300: var(--color-hue-carborado-500);
+
+	// Background
+	--color-background-0: var(--color-hue-carborado-950);
+	--color-background-100: var(--color-hue-carborado-950);
+	--color-background-200: var(--color-hue-carborado-900);
+	--color-background-300: var(--color-hue-carborado-850);
+	--color-background-400: var(--color-hue-carborado-800);
+	--color-background-500: var(--color-hue-carborado-700);
+
+	// Accents
+	--color-accent-1: var(--color-hue-carborado-1000);
+	--color-accent-2: var(--color-hue-carborado-900);
+	--color-accent-3: var(--color-hue-carborado-800);
+	--color-accent-4: var(--color-hue-carborado-700);
+	--color-accent-5: var(--color-hue-carborado-600);
+	--color-accent-6: var(--color-hue-carborado-400);
+	--color-accent-7: var(--color-hue-carborado-200);
+	--color-accent-8: var(--color-hue-carborado-100);
+}
+
+@mixin light-colors {
+	// Primary
+	--color-primary: #04bade;
+	--color-primary-dark: #049abe;
+	--color-primary-light: #00ceef;
+
+	// Text
+	--color-text-0: var(--color-hue-carborado-800);
+	--color-text-100: var(--color-hue-carborado-700);
+	--color-text-200: var(--color-hue-carborado-600);
+	--color-text-300: var(--color-hue-carborado-500);
+
+	// Background
+	--color-background-0: var(--color-hue-carborado-0);
+	--color-background-100: var(--color-hue-carborado-100);
+	--color-background-200: var(--color-hue-carborado-50);
+	--color-background-300: var(--color-hue-carborado-100);
+	--color-background-400: var(--color-hue-carborado-150);
+	--color-background-500: var(--color-hue-carborado-200);
+
+	// Accents
+	--color-accent-1: var(--color-hue-carborado-0);
+	--color-accent-2: var(--color-hue-carborado-100);
+	--color-accent-3: var(--color-hue-carborado-200);
+	--color-accent-4: var(--color-hue-carborado-300);
+	--color-accent-5: var(--color-hue-carborado-400);
+	--color-accent-6: var(--color-hue-carborado-600);
+	--color-accent-7: var(--color-hue-carborado-800);
+	--color-accent-8: var(--color-hue-carborado-900);
+}
