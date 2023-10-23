@@ -24,7 +24,7 @@
 		"eslint": "latest",
 		"eslint-config-next": "latest",
 		"tsconfig": "*",
-		"sass": "^1.69.3",
+		"sass": "^1.69.4",
 		"autoprefixer": "^10.4.16",
 		"classnames": "^2.3.2",
 		"postcss": "^8.4.31",
