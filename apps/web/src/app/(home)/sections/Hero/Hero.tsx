@@ -18,7 +18,7 @@ export function Hero(): JSX.Element {
 				fetchPriority="high"
 				fill
 				placeholder="blur"
-				quality={100}
+				priority
 				src={HeroImage}
 			/>
 		</div>

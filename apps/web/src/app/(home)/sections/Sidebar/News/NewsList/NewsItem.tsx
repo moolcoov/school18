@@ -82,18 +82,6 @@ function getImageSize(image?: VkWallGetPostAttachmentPhoto): VkWallGetPostAttach
 	if (!image) {
 		return undefined;
 	}
-
-	let res: VkWallGetPostAttachmentPhotoSize | undefined;
-	image.photo.sizes.forEach((size) => {
-		if (!res) {
-			res = size;
-			return;
-		}
-
-		if (size.width > res.width) {
-			res = size;
-		}
-	});
-
-	return res;
+	const sizes = [...image.photo.sizes].filter((size) => size.width);
+	return sizes.at(0);
 }
