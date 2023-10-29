@@ -19,6 +19,7 @@ body {
 	text-wrap: balance;
 
 	color: var(--color-text-0);
+	background-color: var(--color-background-100);
 
 	font: var(--text-def);
 	fill: currentColor;
@@ -26,4 +27,16 @@ body {
 	@media (width <= 768px) {
 		font: var(--text-def-mobile);
 	}
+}
+
+.page {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: var(--spacing-s);
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 110rem;
 }

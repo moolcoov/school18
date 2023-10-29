@@ -1,0 +1,8 @@
+.hero {
+	display: flex;
+	gap: var(--spacing-xxxl);
+
+	@media (width <= 1024px) {
+		flex-direction: column;
+	}
+}

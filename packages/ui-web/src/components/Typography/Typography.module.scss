@@ -1,0 +1,37 @@
+.heading {
+	&_0 {
+		font: var(--heading-0);
+
+		@media (width <= 768px) {
+			font: var(--heading-0-mobile);
+		}
+	}
+
+	&_1 {
+		font: var(--heading-1);
+
+		@media (width <= 768px) {
+			font: var(--heading-1-mobile);
+		}
+	}
+
+	&_2 {
+		font: var(--heading-2);
+
+		@media (width <= 768px) {
+			font: var(--heading-2-mobile);
+		}
+	}
+
+	&_tiny {
+		letter-spacing: 1.43px;
+		text-transform: uppercase;
+
+		color: var(--color-text-200);
+
+		font-family: var(--font-inter);
+		font-size: 1.1rem;
+		font-weight: 900;
+		line-height: 2.4rem;
+	}
+}

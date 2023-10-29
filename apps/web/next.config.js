@@ -2,9 +2,19 @@
 const nextConfig = {
 	reactStrictMode: true,
 
+	transpilePackages: ["ui", "utils"],
+
 	experimental: {
 		typedRoutes: true,
-		serverActions: true,
+	},
+
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "**.userapi.com",
+			},
+		],
 	},
 };
 
