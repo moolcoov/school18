@@ -1,0 +1,18 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xxxl);
+}
+
+.section {
+	display: flex;
+
+	width: 34rem;
+	padding: var(--spacing-l);
+
+	border: 1px solid var(--color-accent-3);
+
+	border-radius: 1.6rem;
+	background: var(--color-background-200);
+	gap: var(--spacing-l);
+}

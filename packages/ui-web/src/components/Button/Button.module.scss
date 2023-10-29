@@ -1,0 +1,87 @@
+.button {
+	display: flex;
+
+	align-items: center;
+
+	height: fit-content;
+
+	cursor: pointer;
+
+	transition: background-color 0.2s ease-out;
+
+	color: var(--button-color);
+
+	border: none;
+
+	border-radius: var(--border-radius-ui);
+
+	background-color: var(--button-background);
+
+	font: var(--text-def);
+
+	gap: var(--spacing-m);
+	fill: currentColor;
+
+	span {
+		background-color: transparent;
+	}
+
+	&_action {
+		padding: var(--spacing-xs, 6px) var(--spacing-m, 12px);
+	}
+
+	&_navigation {
+		padding: var(--spacing-xs, 6px) var(--spacing-l, 16px);
+
+		@media (width <= 768px) {
+			padding: var(--spacing-xs, 6px) var(--spacing-s, 16px);
+		}
+	}
+
+	&:hover {
+		@media (width > 768px) {
+			background-color: var(--button-background-hovered);
+		}
+	}
+
+	&:active {
+		background-color: var(--button-background-active);
+	}
+
+	&_primary {
+		--button-color: var(--color-background-200);
+		--button-background: var(--color-primary);
+		--button-background-hovered: var(--color-primary-light);
+		--button-background-active: var(--color-primary-dark);
+	}
+
+	&_secondary {
+		--button-color: var(--color-text-0, currentColor);
+		--button-background: var(--color-background-300);
+		--button-background-hovered: var(--color-background-400);
+		--button-background-active: color-mix(in sRGB, var(--color-background-400), 30% transparent);
+	}
+
+	&_transparent {
+		--button-color: var(--color-text-0, currentColor);
+		--button-background: transparent;
+		--button-background-hovered: var(--color-background-300);
+		--button-background-active: color-mix(in sRGB, var(--color-background-300), 30% transparent);
+	}
+
+	&_left {
+		justify-content: flex-start;
+	}
+
+	&_center {
+		justify-content: center;
+	}
+
+	&_right {
+		justify-content: flex-end;
+	}
+
+	@media (width <= 768px) {
+		font: var(--text-def-mobile);
+	}
+}

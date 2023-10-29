@@ -9,26 +9,30 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"react": "latest",
-		"react-dom": "latest",
+		"@vercel/analytics": "^1.1.0",
 		"next": "latest",
 		"next-themes": "0.2.1",
+		"react": "latest",
+		"react-dom": "latest",
 		"react-loading-skeleton": "^3.3.1",
-		"sharp": "^0.32.6"
+		"sharp": "^0.32.6",
+		"ui": "*",
+		"utils": "*",
+		"moment": "2.29.4"
 	},
 	"devDependencies": {
-		"typescript": "latest",
-		"@types/react": "latest",
 		"@types/node": "latest",
+		"@types/react": "latest",
 		"@types/react-dom": "latest",
-		"eslint": "latest",
-		"eslint-config-next": "latest",
-		"tsconfig": "*",
-		"sass": "^1.68.0",
 		"autoprefixer": "^10.4.16",
 		"classnames": "^2.3.2",
+		"eslint": "latest",
+		"eslint-config-next": "latest",
 		"postcss": "^8.4.31",
-		"postcss-media-minmax": "^5.0.0"
+		"postcss-media-minmax": "^5.0.0",
+		"sass": "^1.68.0",
+		"tsconfig": "*",
+		"typescript": "latest"
 	},
 	"browserslist": [
 		"defaults"
