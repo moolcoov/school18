@@ -15,4 +15,8 @@
 	border-radius: 1.6rem;
 	background: var(--color-background-200);
 	gap: var(--spacing-l);
+
+	@media (width <= 1024px) {
+		width: 100%;
+	}
 }

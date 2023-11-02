@@ -9,16 +9,19 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@sanity/image-url": "^1.0.2",
 		"@vercel/analytics": "^1.1.0",
+		"moment": "2.29.4",
 		"next": "latest",
+		"next-sanity": "^5.5.10",
 		"next-themes": "0.2.1",
 		"react": "latest",
 		"react-dom": "latest",
 		"react-loading-skeleton": "^3.3.1",
+		"sanity": "^3.18.1",
 		"sharp": "^0.32.6",
 		"ui": "*",
-		"utils": "*",
-		"moment": "2.29.4"
+		"utils": "*"
 	},
 	"devDependencies": {
 		"@types/node": "latest",

@@ -39,6 +39,8 @@
 		}
 
 		&_first {
+			color: var(--color-hue-carborado-0);
+
 			font-weight: 500;
 		}
 
@@ -50,7 +52,7 @@
 	}
 
 	&__subtitle {
-		color: var(--color-text-100);
+		color: var(--color-hue-carborado-300);
 
 		font-size: 2.4rem;
 		font-weight: 500;

@@ -50,5 +50,6 @@ module.exports = {
 		"@typescript-eslint/no-unsafe-assignment": 0,
 		"@typescript-eslint/no-unsafe-call": 0,
 		"import/no-extraneous-dependencies": 0,
+		"turbo/no-undeclared-env-vars": 0,
 	},
 };

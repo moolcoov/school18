@@ -1,0 +1,14 @@
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m);
+
+	p {
+		text-wrap: wrap;
+		word-wrap: break-word;
+
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 26px;
+	}
+}

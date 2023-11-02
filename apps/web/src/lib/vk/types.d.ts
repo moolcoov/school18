@@ -2,6 +2,7 @@ interface VkWallGetResponse {
 	response: {
 		count: number;
 		items: VkWallGetPost[];
+		groups?: VkWallGetPostGroups;
 	};
 }
 
@@ -72,4 +73,17 @@ interface VkWallGetPostAttachmentPhotoSize {
 	type: string;
 	width: number;
 	url: string;
+}
+
+type VkWallGetPostGroups = VkWallGetPostGroup[];
+
+interface VkWallGetPostGroup {
+	id: number;
+	name: string;
+	screen_name: string;
+	is_closed: 0 | 1;
+	type: string;
+	photo_50: string;
+	photo_100: string;
+	photo_200: string;
 }
