@@ -3,6 +3,15 @@
 	gap: var(--spacing-xxxl);
 
 	@media (width <= 1024px) {
+		gap: var(--spacing-xxl);
+	}
+
+	@media (width <= 768px) {
 		flex-direction: column;
+		gap: var(--spacing-xl);
+	}
+
+	@media (width <= 425px) {
+		gap: var(--spacing-m);
 	}
 }

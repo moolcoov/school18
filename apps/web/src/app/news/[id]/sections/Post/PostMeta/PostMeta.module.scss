@@ -9,6 +9,10 @@
 		font-size: 1.6rem;
 
 		font-weight: 500;
+
+		@media (width <= 425px) {
+			font-size: 1.4rem;
+		}
 	}
 
 	&__image {

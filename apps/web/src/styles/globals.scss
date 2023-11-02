@@ -37,6 +37,10 @@ body {
 
 	padding: 0 var(--spacing-l);
 
+	@media (width <= 768px) {
+		gap: var(--spacing-xxs);
+	}
+
 	@media (width <= 425px) {
 		padding: 0 var(--spacing-s);
 	}
@@ -45,6 +49,10 @@ body {
 .wrapper {
 	width: 100%;
 	max-width: 110rem;
+
+	@media (width <= 768px) {
+		max-width: 50rem;
+	}
 }
 
 .stack {
@@ -54,10 +62,18 @@ body {
 
 	width: 100%;
 	gap: var(--spacing-xxl);
+
+	@media (width <= 768px) {
+		gap: var(--spacing-xl);
+	}
 }
 
 .section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-l);
+
+	@media (width <= 768px) {
+		gap: var(--spacing-m);
+	}
 }

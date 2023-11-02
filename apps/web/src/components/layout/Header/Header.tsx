@@ -6,7 +6,7 @@ export function Header(): JSX.Element {
 	return (
 		<header className={styles.header}>
 			<div className={cn("wrapper", styles.header__content)}>
-				<Link href="/">
+				<Link href="/" style={{ display: "flex" }}>
 					<svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
 						<g clipPath="url(#clip0_1202_279)">
 							<path

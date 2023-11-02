@@ -1,9 +1,9 @@
 import type { ImageUrlBuilder } from "sanity";
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import { Heading } from "ui";
 import styles from "./Projects.module.scss";
 import { urlFor } from "@/lib/sanity/sanity.image";
-import { Heading } from "ui";
 
 interface ProjectCardProps {
 	title: string;
@@ -43,7 +43,9 @@ export function ProjectCard({ title, description, icon, colors }: ProjectCardPro
 				</div>
 			) : null}
 			<div className={styles.card__info}>
-				<Heading level={1} className={styles.card__title}>{title}</Heading>
+				<Heading className={styles.card__title} level={1}>
+					{title}
+				</Heading>
 				{description ? <p className={styles.card__description}>{description}</p> : null}
 			</div>
 		</div>

@@ -2,6 +2,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--spacing-l);
+
+	@media (width <= 768px) {
+		gap: var(--spacing-s);
+	}
 }
 
 .card {
@@ -42,14 +46,14 @@
 		flex: 1;
 		flex-direction: column;
 		gap: var(--spacing-xs, 0.6rem);
+
+		@media (width <= 425px) {
+			gap: var(--spacing-xxs, 0.4rem);
+		}
 	}
 
 	&__title {
 		color: var(--color-pcard-accent, var(--color-text-0));
-
-		// font-size: 2.9rem;
-		// font-weight: 700;
-		// line-height: normal;
 	}
 
 	&__description {
@@ -57,5 +61,15 @@
 
 		font-size: 1.6rem;
 		font-weight: 600;
+
+		@media (width <= 425px) {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	@media (width <= 425px) {
+		height: 11rem;
+		padding: var(--spacing-l, 1.6rem);
 	}
 }
