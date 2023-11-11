@@ -1,0 +1,27 @@
+.button {
+	display: flex;
+
+	align-items: center;
+
+	width: 100%;
+
+	cursor: pointer;
+
+	color: var(--color-text-100);
+	border: none;
+
+	background: none;
+	gap: var(--spacing-s);
+	fill: currentColor;
+
+	span {
+		font-family: var(--font-family-montserrat);
+		font-size: 1.7rem;
+		font-weight: 500;
+		line-height: 2rem;
+	}
+
+	@media (width <= 768px) {
+		padding: var(--spacing-xxs, 0.4rem) var(--spacing-l, 1.6rem);
+	}
+}

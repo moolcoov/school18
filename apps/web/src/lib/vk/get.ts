@@ -13,3 +13,22 @@ export async function VkWallGet(params: { count?: number; offset?: number }): Pr
 	const data: VkWallGetResponse = await res.json();
 	return data;
 }
+
+export async function VkWallGetById(params: { id: string }): Promise<VkWallGetResponse> {
+	const { id = "" } = params;
+	const res: Response = await fetch(
+		`https://api.vk.com/method/wall.getById?v=${process.env["VK.API_VERSION"]}&posts=${id}&extended=1`,
+		{
+			headers: { Authorization: `Bearer ${process.env["VK.ACCESS_TOKEN"] ?? ""}` },
+			next: {
+				revalidate: 3600,
+				tags: ["news"],
+			},
+		},
+	);
+	if (!res.ok) {
+		throw new Error("Post get error");
+	}
+	const data: VkWallGetResponse = await res.json();
+	return data;
+}

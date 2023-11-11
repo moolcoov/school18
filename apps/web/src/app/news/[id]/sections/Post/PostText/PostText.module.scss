@@ -1,0 +1,23 @@
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m);
+
+	p {
+		text-wrap: wrap;
+		word-wrap: break-word;
+
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 26px;
+
+		@media (width <= 425px) {
+			font-size: 15px;
+			line-height: 24px;
+		}
+	}
+
+	@media (width <= 425px) {
+		gap: var(--spacing-xs);
+	}
+}

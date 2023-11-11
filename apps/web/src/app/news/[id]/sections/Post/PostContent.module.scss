@@ -1,0 +1,17 @@
+.repost {
+	display: flex;
+	gap: var(--spacing-l, 1.6rem);
+	overflow: hidden;
+
+	&__line {
+		min-width: 0.1rem;
+
+		border-radius: 9999px;
+
+		background: var(--color-primary, #ff9900);
+	}
+
+	@media (width <= 425px) {
+		gap: var(--spacing-m, 1.2rem);
+	}
+}

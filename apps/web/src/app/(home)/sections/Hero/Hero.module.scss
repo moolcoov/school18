@@ -17,6 +17,9 @@
 		user-select: none;
 
 		background: linear-gradient(0deg, rgb(18 18 18 / 60%) 0%, rgb(18 18 18 / 60%) 100%);
+
+		object-position: center;
+		object-fit: cover;
 	}
 
 	&__textbox {
@@ -36,9 +39,23 @@
 		h1 {
 			font-size: 7.2rem;
 			line-height: normal;
+
+			@media (width <= 1024px) {
+				font-size: 7rem;
+			}
+
+			@media (width <= 768px) {
+				font-size: 6.2rem;
+			}
+
+			@media (width <= 425px) {
+				font-size: 5.2rem;
+			}
 		}
 
 		&_first {
+			color: var(--color-hue-carborado-0);
+
 			font-weight: 500;
 		}
 
@@ -50,9 +67,36 @@
 	}
 
 	&__subtitle {
-		color: var(--color-text-100);
+		color: var(--color-hue-carborado-300);
 
 		font-size: 2.4rem;
 		font-weight: 500;
+		line-height: normal;
+
+		@media (width <= 1024px) {
+			font-size: 2.3rem;
+		}
+
+		@media (width <= 768px) {
+			font-size: 2.1rem;
+		}
+
+		@media (width <= 425px) {
+			font-size: 2rem;
+		}
+	}
+
+	@media (width <= 1024px) {
+		padding: 0 4rem;
+	}
+
+	@media (width <= 768px) {
+		height: 38rem;
+		padding: 0 3.6rem;
+	}
+
+	@media (width <= 425px) {
+		height: 30rem;
+		padding: 0 2.8rem;
 	}
 }
