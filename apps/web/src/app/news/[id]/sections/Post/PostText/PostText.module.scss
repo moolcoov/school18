@@ -16,4 +16,8 @@
 			line-height: 24px;
 		}
 	}
+
+	@media (width <= 425px) {
+		gap: var(--spacing-xs);
+	}
 }
