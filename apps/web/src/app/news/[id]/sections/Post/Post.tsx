@@ -1,11 +1,21 @@
 import cn from "classnames";
+import { notFound } from "next/navigation";
 import sectionStyles from "../Post.module.scss";
 import { PostMeta } from "./PostMeta";
 import { PostText } from "./PostText";
 import styles from "./PostContent.module.scss";
 import { PostAttachments } from "./PostAttachments";
+import { VkWallGetById } from "@/lib/vk";
 
-export function Post({ post, groups }: { post: VkWallGetPost; groups?: VkWallGetPostGroups }): JSX.Element {
+export async function Post({ postId }: { postId: string }): Promise<JSX.Element> {
+	const postResponse: VkWallGetResponse = await VkWallGetById({ id: postId });
+	const groups = postResponse.response.groups;
+	const post: VkWallGetPost | undefined = postResponse.response.items.at(0);
+
+	if (!post) {
+		notFound();
+	}
+
 	const postGroup = groups?.at(-1);
 	const sourceGroup = groups?.at(0);
 

@@ -49,17 +49,25 @@
 			border-radius: var(--border-radius-ui);
 			background-color: var(--color-background-300);
 
-			& > img {
+			& > a {
 				z-index: 2;
+
+				display: flex;
 
 				width: 100%;
 				height: auto;
 				max-height: 100%;
 
-				object-fit: contain;
-				object-position: center;
+				& > img {
+					width: 100%;
+					height: auto;
+					max-height: 100%;
 
-				user-select: none;
+					object-fit: contain;
+					object-position: center;
+
+					user-select: none;
+				}
 			}
 		}
 

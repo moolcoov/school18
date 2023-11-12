@@ -3,8 +3,7 @@ import styles from "./PostText.module.scss";
 
 export function PostText({ postText, copyHistory }: { postText?: string; copyHistory?: VkWallGetPost[] }): JSX.Element {
 	if (!postText && !copyHistory) {
-		// @ts-expect-error return
-		return;
+		return <>{null}</>;
 	}
 
 	const lines = postText?.split("\n");

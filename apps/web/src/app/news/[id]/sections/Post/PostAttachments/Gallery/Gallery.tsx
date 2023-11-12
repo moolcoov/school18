@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
 import { IconChevronLeftCircle, IconChevronRightCircle } from "ui";
+import Link from "next/link";
+import type { Route } from "next";
 import styles from "./Gallery.module.scss";
 import { useContainerDimensions } from "@/hooks";
 
@@ -98,15 +100,16 @@ export function Gallery({ images }: { images: VkWallGetPostAttachmentPhoto[] }):
 									<div className={styles.gallery__content__thumbnail}>
 										<Image alt="thumbnail" fill loading="eager" quality={1} src={thumbnailSize.url} />
 									</div>
-
-									<Image
-										alt={image.photo.text}
-										height={size.height}
-										loading="eager"
-										quality={100}
-										src={size.url}
-										width={size.width}
-									/>
+									<Link href={size.url as Route} target="_blank">
+										<Image
+											alt={image.photo.text}
+											height={size.height}
+											loading="eager"
+											quality={100}
+											src={size.url}
+											width={size.width}
+										/>
+									</Link>
 								</div>
 							);
 						})}
