@@ -8,15 +8,7 @@
 	@include light-colors;
 }
 
-[data-theme="dark"] {
-	@include dark;
-}
-
-[data-theme="light"] {
-	@include light;
-}
-
-[data-theme="auto"] {
+@mixin auto {
 	@media (prefers-color-scheme: dark) {
 		@include dark;
 	}
@@ -24,4 +16,20 @@
 	@media (prefers-color-scheme: light) {
 		@include light;
 	}
+}
+
+html {
+	@include auto;
+}
+
+html[data-theme="dark"] {
+	@include dark;
+}
+
+html[data-theme="light"] {
+	@include light;
+}
+
+html[data-theme="auto"] {
+	@include auto;
 }
