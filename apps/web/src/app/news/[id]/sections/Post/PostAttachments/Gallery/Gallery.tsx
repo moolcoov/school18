@@ -56,7 +56,7 @@ export function Gallery({ images }: { images: VkWallGetPostAttachmentPhoto[] }):
 	}
 
 	return (
-		<div className={styles.gallery}>
+		<div className={styles.gallery} suppressHydrationWarning>
 			<div className={styles.gallery__slider}>
 				{images.length > 1 ? (
 					<div

@@ -47,7 +47,7 @@
 		font-weight: 500;
 		line-height: 2.6rem;
 
-		@media (width <= 425px) {
+		@media (width <= 460px) {
 			font-size: 1.6rem;
 			line-height: 2.4rem;
 		}
@@ -87,7 +87,7 @@
 		}
 	}
 
-	@media (width <= 425px) {
+	@media (width <= 460px) {
 		gap: var(--spacing-m, 1.2rem);
 	}
 }

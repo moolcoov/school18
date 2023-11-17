@@ -1,6 +1,7 @@
 .repost {
 	display: flex;
 	gap: var(--spacing-l, 1.6rem);
+
 	overflow: hidden;
 
 	&__line {
@@ -11,7 +12,7 @@
 		background: var(--color-primary, #ff9900);
 	}
 
-	@media (width <= 425px) {
+	@media (width <= 460px) {
 		gap: var(--spacing-m, 1.2rem);
 	}
 }
