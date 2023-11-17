@@ -96,10 +96,6 @@
 				left: -8px;
 			}
 		}
-
-		@media (width <= 443px) {
-			gap: var(--spacing-s);
-		}
 	}
 
 	&__control-button {
