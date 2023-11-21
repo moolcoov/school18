@@ -1,13 +1,69 @@
 import Link from "next/link";
 import cn from "classnames";
+import type { ReactNode } from "react";
+import { IconHome, IconInfo, IconMegaphone, IconPhotoStack, IconTelegram, IconVk } from "ui";
 import styles from "./Header.module.scss";
+import { NavigationDesktop, NavigationMobile } from "./Navigation";
+import { ThemeSwitcher } from "./ThemeSwitcher";
+
+export interface Tab {
+	title?: string;
+	icon?: ReactNode;
+	href: string;
+	hasTitle?: "both" | "mobile" | "desktop";
+	hasIcon?: "both" | "mobile" | "desktop";
+	group?: string;
+}
+
+const tabs: Tab[] = [
+	{
+		title: "Главная",
+		icon: <IconHome size={23} />,
+		href: "/",
+		hasIcon: "mobile",
+	},
+	{
+		title: "Новости",
+		icon: <IconMegaphone size={23} />,
+		href: "/news",
+		hasIcon: "mobile",
+	},
+	{
+		title: "Проекты",
+		icon: <IconPhotoStack size={23} />,
+		href: "/projects",
+		hasIcon: "mobile",
+	},
+	{
+		title: "О школе",
+		icon: <IconInfo size={23} />,
+		href: "/about",
+		hasIcon: "mobile",
+	},
+	{
+		title: "Telegram канал",
+		icon: <IconTelegram size={20} />,
+		href: "https://t.me/school18_bratsk",
+		group: "icon",
+		hasTitle: "mobile",
+	},
+	{
+		title: "Группа VK",
+		icon: <IconVk size={20} />,
+		href: "https://vk.com/school18bratsk",
+		group: "icon",
+		hasTitle: "mobile",
+	},
+];
 
 export function Header(): JSX.Element {
 	return (
 		<header className={styles.header}>
 			<div className={cn("wrapper", styles.header__content)}>
+				<NavigationMobile tabs={tabs} />
+
 				<Link href="/" style={{ display: "flex" }}>
-					<svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+					<svg fill="none" height="40" viewBox="0 0 48 48" width="40" xmlns="http://www.w3.org/2000/svg">
 						<g clipPath="url(#clip0_1202_279)">
 							<path
 								d="M32.8421 0H15.1579C6.78642 0 0 6.78642 0 15.1579V32.8421C0 41.2136 6.78642 48 15.1579 48H32.8421C41.2136 48 48 41.2136 48 32.8421V15.1579C48 6.78642 41.2136 0 32.8421 0Z"
@@ -26,21 +82,9 @@ export function Header(): JSX.Element {
 					</svg>
 				</Link>
 
-				<div>
-					<nav className={styles.header__navigation}>
-						<ul>
-							<li>
-								<Link href="/">Новости</Link>
-							</li>
-							<li>
-								<Link href="/">Проекты</Link>
-							</li>
-							<li>
-								<Link href="/">О школе</Link>
-							</li>
-						</ul>
-					</nav>
-				</div>
+				<NavigationDesktop tabs={tabs} />
+
+				<ThemeSwitcher />
 			</div>
 		</header>
 	);

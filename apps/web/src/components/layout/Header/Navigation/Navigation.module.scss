@@ -1,0 +1,172 @@
+.navigation {
+	display: flex;
+	gap: var(--spacing-m);
+
+	align-items: center;
+
+	&_mobile {
+		&__button {
+			--fill-primary: var(--color-text-0);
+
+			display: flex;
+			align-items: center;
+
+			justify-content: center;
+
+			width: 3.9rem;
+			height: 3.9rem;
+
+			padding: var(--spacing-s, 0.8rem) var(--spacing-s, 0.8rem);
+
+			cursor: pointer;
+
+			transition: 0.2s background-color;
+
+			border: none;
+
+			border-radius: 9999px;
+			background: none;
+
+			-webkit-tap-highlight-color: transparent;
+
+			&:active {
+				background-color: var(--color-accent-3);
+			}
+		}
+
+		&__menu {
+			position: fixed;
+
+			z-index: 999999;
+			top: 0;
+			left: 0;
+
+			display: flex;
+
+			visibility: hidden;
+			justify-content: center;
+
+			width: 100dvw;
+			height: 100dvh;
+
+			padding: 9rem var(--spacing-s);
+
+			transition: 0.2s opacity ease;
+
+			opacity: 0;
+
+			background: color-mix(in sRGB, var(--color-hue-carborado-950), transparent 20%);
+
+			&_opened {
+				visibility: visible;
+
+				opacity: 1;
+			}
+
+			&__back {
+				position: absolute;
+
+				z-index: 1;
+
+				top: 0;
+				left: 0;
+
+				width: 100dvw;
+				height: 100lvh;
+			}
+
+			&__content {
+				position: relative;
+
+				z-index: 2;
+
+				display: flex;
+				flex-direction: column;
+
+				width: 100%;
+
+				height: fit-content;
+				padding: var(--spacing-m, 1.2rem) var(--spacing-l, 1.6rem);
+
+				border: 1px solid var(--color-accent-3, #333333);
+
+				border-radius: var(--border-radius-layout, 1.6rem);
+				background: var(--color-background-200, #171717);
+				gap: var(--spacing-m, 1.2rem);
+			}
+		}
+
+		@media (width > 768px) {
+			display: none;
+		}
+	}
+
+	@media (width <= 768px) {
+		display: none;
+	}
+}
+
+.tab {
+	--fill-primary: var(--color-text-0);
+	--fill-secondary: var(--color-background-100);
+
+	display: flex;
+	align-items: center;
+
+	transition:
+		0.2s background-color ease,
+		0.2s opacity ease;
+
+	opacity: 0.95;
+
+	&_desktop {
+		justify-content: center;
+
+		padding: var(--spacing-s, 0.8rem) var(--spacing-l, 1.6rem);
+
+		border-radius: 9999px;
+
+		&_icon {
+			width: 3.9rem;
+			height: 3.9rem;
+			padding: var(--spacing-s, 0.8rem) var(--spacing-s, 0.8rem);
+		}
+
+		span {
+			text-align: center;
+
+			font-size: 1.7rem;
+			font-weight: 500;
+		}
+
+		&:hover {
+			opacity: 1;
+			background-color: var(--color-accent-3);
+		}
+	}
+
+	&_mobile {
+		display: flex;
+
+		padding: var(--spacing-m, 1.2rem);
+		gap: var(--spacing-l, 1.6rem);
+
+		span {
+			text-align: center;
+
+			font-size: 1.7rem;
+
+			font-weight: 500;
+		}
+
+		svg {
+			width: 21px;
+			height: 21px;
+		}
+	}
+
+	&_active {
+		--fill-primary: var(--color-primary);
+		color: var(--color-primary);
+	}
+}

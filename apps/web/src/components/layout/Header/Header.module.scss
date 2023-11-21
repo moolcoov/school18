@@ -12,24 +12,4 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-
-	&__navigation {
-		--font-size: 1.8rem;
-
-		ul {
-			display: flex;
-			align-items: center;
-			gap: var(--spacing-l);
-		}
-
-		li {
-			list-style: none;
-
-			font-size: var(--font-size);
-		}
-
-		@media (width <= 768px) {
-			display: none;
-		}
-	}
 }

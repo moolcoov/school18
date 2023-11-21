@@ -1,0 +1,117 @@
+.theme-switcher {
+	position: relative;
+
+	&__button {
+		--fill-primary: var(--color-text-0);
+		--fill-secondary: var(--color-background-100);
+
+		display: flex;
+		align-items: center;
+
+		justify-content: center;
+
+		width: 3.9rem;
+		height: 3.9rem;
+
+		padding: var(--spacing-s, 0.8rem) var(--spacing-s, 0.8rem);
+
+		cursor: pointer;
+
+		transition: 0.2s background-color;
+
+		border: none;
+
+		border-radius: 9999px;
+		background: none;
+
+		-webkit-tap-highlight-color: transparent;
+
+		&:hover {
+			background-color: var(--color-accent-3);
+		}
+	}
+
+	&__options {
+		position: absolute;
+
+		z-index: 9999;
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+
+		width: 20rem;
+
+		padding: var(--spacing-s);
+
+		animation: options-animation 0.2s ease;
+
+		border: 1px solid var(--color-accent-3);
+
+		border-radius: var(--border-radius-ui);
+		background: var(--color-background-200);
+		gap: var(--spacing-xxs);
+	}
+
+	&__option {
+		display: flex;
+
+		align-items: center;
+
+		justify-content: space-between;
+
+		padding: var(--spacing-m) var(--spacing-m);
+
+		cursor: pointer;
+
+		transition:
+			0.1s background-color,
+			0.1s border;
+
+		border: 1px solid transparent;
+		border-radius: var(--border-radius-ui);
+		background: none;
+
+		font-family: var(--font-family-montserrat);
+
+		font-size: 15px;
+		font-weight: 500;
+
+		& > svg {
+			fill: var(--color-text-100);
+		}
+
+		&__info {
+			display: flex;
+			gap: var(--spacing-m);
+
+			align-items: center;
+		}
+
+		&:active {
+			border: 1px solid var(--color-accent-3);
+			background-color: var(--color-background-300);
+		}
+
+		@media (width > 768px) {
+			&:hover {
+				border: 1px solid var(--color-accent-3);
+				background-color: var(--color-background-300);
+			}
+		}
+	}
+}
+
+@keyframes options-animation {
+	0% {
+		scale: 0.6;
+
+		opacity: 0;
+	}
+
+	100% {
+		scale: 1;
+
+		opacity: 1;
+	}
+}
