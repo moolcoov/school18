@@ -50,11 +50,11 @@ export function NavigationMobile({ tabs }: { tabs: Tab[] }): JSX.Element {
 						{[...icons].map((tab) => (
 							<NavigationTab
 								key={tab.title}
-								tab={tab}
-								variant="mobile"
 								onClick={() => {
 									setIsOpened(false);
 								}}
+								tab={tab}
+								variant="mobile"
 							/>
 						))}
 					</div>

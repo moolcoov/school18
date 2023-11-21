@@ -1,6 +1,4 @@
-export * from "./navigation";
-export * from "./providers";
-export * from "./extensions";
+import type { IconProps } from "./Icon.props";
 
 const fillPrimary = "var(--fill-primary, currentColor)";
 const fillSecondary = "var(--fill-secondary, var(--color-background-100))";
