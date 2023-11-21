@@ -1,5 +1,3 @@
-import type { IconProps } from "../Icon.props";
-
 export function EmojiTriangularRuler({ size }: IconProps): JSX.Element {
 	return (
 		<svg
