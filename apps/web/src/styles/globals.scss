@@ -1,7 +1,7 @@
 @import "base";
 
 ::selection {
-	color: var(--color-background-100);
+	color: var(--color-hue-carborado-900);
 	background-color: var(--color-primary);
 }
 
@@ -76,4 +76,11 @@ body {
 	@media (width <= 768px) {
 		gap: var(--spacing-m);
 	}
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+
+	background: var(--color-accent-3);
 }

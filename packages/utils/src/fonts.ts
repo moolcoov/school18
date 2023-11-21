@@ -7,7 +7,7 @@ export const montserrat = Montserrat({
 });
 
 export const inter = Inter({
-	weight: ["300", "500", "800", "900"],
+	// weight: ["300", "500", "800", "900"],
 	subsets: ["cyrillic", "latin"],
 	variable: "--font-family-inter",
 });

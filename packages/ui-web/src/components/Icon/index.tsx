@@ -1,3 +1,2 @@
-export * from "./Icons";
-export * from "./Emojis";
+export * from "./icons";
 export * from "./logo";
