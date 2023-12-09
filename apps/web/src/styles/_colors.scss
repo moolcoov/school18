@@ -2,12 +2,12 @@
 
 :root {
 	// carbonado
-	--color-hue-carborado-0: #f7f7f7;
-	--color-hue-carborado-50: #f0f0f0;
-	--color-hue-carborado-100: #e7ecf9;
-	--color-hue-carborado-150: #e1e8fb;
-	--color-hue-carborado-200: #d3ddff;
-	--color-hue-carborado-300: #b3b3b3;
+	--color-hue-carborado-0: #ffffff;
+	--color-hue-carborado-50: #f7f7f7;
+	--color-hue-carborado-100: #eff3ff;
+	--color-hue-carborado-150: #e7e7e7;
+	--color-hue-carborado-200: #d6d6d6;
+	--color-hue-carborado-300: #aaaaaa;
 	--color-hue-carborado-400: #999999;
 	--color-hue-carborado-500: #808080;
 	--color-hue-carborado-600: #666666;
@@ -97,7 +97,6 @@
 	--color-text-300: var(--color-hue-carborado-500);
 
 	// Background
-	--color-background-0: var(--color-hue-carborado-950);
 	--color-background-100: var(--color-hue-carborado-950);
 	--color-background-200: var(--color-hue-carborado-900);
 	--color-background-300: var(--color-hue-carborado-850);
@@ -128,8 +127,7 @@
 	--color-text-300: var(--color-hue-carborado-500);
 
 	// Background
-	--color-background-0: var(--color-hue-carborado-0);
-	--color-background-100: var(--color-hue-carborado-100);
+	--color-background-100: var(--color-hue-carborado-50);
 	--color-background-200: var(--color-hue-carborado-0);
 	--color-background-300: var(--color-hue-carborado-100);
 	--color-background-400: var(--color-hue-carborado-150);

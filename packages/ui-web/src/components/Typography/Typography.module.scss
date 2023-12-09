@@ -1,9 +1,9 @@
 .heading {
-	&_0 {
-		font: var(--heading-0);
+	&_page {
+		font: var(--heading-page);
 
 		@media (width <= 768px) {
-			font: var(--heading-0-mobile);
+			font: var(--heading-page-mobile);
 		}
 	}
 

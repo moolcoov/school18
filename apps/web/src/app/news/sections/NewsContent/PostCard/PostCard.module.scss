@@ -1,0 +1,149 @@
+.card {
+	position: relative;
+
+	display: flex;
+
+	overflow: hidden;
+
+	padding: var(--spacing-l, 1.6rem);
+
+	transition: border-color 0.2s ease;
+
+	border: 1px solid var(--color-accent-3, #333333);
+
+	border-radius: var(--border-radius-layout, 1.6rem);
+	background: var(--color-background-200, #171717);
+
+	&_cover {
+		--title-lines: 2;
+		flex-direction: column;
+		gap: var(--spacing-l);
+
+		@media (width <= 460px) {
+			gap: var(--spacing-m);
+		}
+	}
+
+	&_small {
+		--title-lines: 3;
+
+		align-items: center;
+		flex-direction: row;
+
+		gap: var(--spacing-xl);
+
+		@media (width <= 460px) {
+			gap: var(--spacing-l);
+		}
+	}
+
+	&_pinned {
+		border-color: var(--color-hue-topaz-800);
+
+		@media (width > 768px) {
+			&:hover {
+				border-color: var(--color-hue-topaz-800) !important;
+			}
+		}
+	}
+
+	&__image {
+		position: relative;
+
+		overflow: hidden;
+		flex: 1;
+
+		border: 1px solid var(--color-accent-3);
+
+		border-radius: var(--border-radius-ui);
+
+		img {
+			object-fit: cover;
+			object-position: center;
+		}
+
+		&_cover {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 4/2;
+		}
+
+		&_small {
+			min-width: 11rem;
+			max-width: 11rem;
+			height: 100%;
+			aspect-ratio: 1/1;
+
+			@media (width <= 460px) {
+				min-width: 10.2rem;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+
+		overflow: hidden;
+		flex-direction: column;
+		gap: var(--spacing-s);
+
+		width: 100%;
+
+		&__title {
+			overflow: hidden;
+			align-self: stretch;
+
+			// height: calc(2.6rem * 2);
+
+			font-size: 1.8rem;
+			font-weight: 500;
+			line-height: 2.6rem;
+
+			@supports (-webkit-line-clamp: 2) {
+				display: -webkit-box;
+
+				text-overflow: ellipsis;
+				-webkit-line-clamp: var(--title-lines, 2);
+				-webkit-box-orient: vertical;
+			}
+
+			@media (width <= 460px) {
+				font-size: 1.6rem;
+				line-height: 2.5rem;
+			}
+		}
+
+		&__tags {
+			display: flex;
+			align-items: center;
+			gap: var(--spacing-xxs);
+
+			span {
+				text-align: center;
+
+				color: var(--color-text-100);
+
+				font-size: 1.6rem;
+				font-weight: 500;
+
+				@media (width <= 460px) {
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		@media (width <= 460px) {
+			gap: var(--spacing-xs);
+		}
+	}
+
+	@media (width <= 460px) {
+		padding: var(--spacing-m);
+	}
+
+	@media (width > 768px) {
+		&:hover {
+			border-color: var(--color-accent-4);
+		}
+	}
+}

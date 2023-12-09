@@ -169,6 +169,12 @@
 
 		transition: left 0.3s ease;
 
+		&_few {
+			right: 0;
+
+			justify-content: center;
+		}
+
 		&__bullet {
 			width: var(--bullet-size);
 			height: var(--bullet-size);

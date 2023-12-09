@@ -1,0 +1,20 @@
+.info {
+	position: sticky;
+	top: var(--spacing-m);
+
+	display: flex;
+	flex-direction: column;
+
+	min-width: fit-content;
+
+	height: fit-content;
+	gap: var(--spacing-xxs);
+
+	p {
+		color: var(--color-text-100);
+
+		font-size: 1.5rem;
+
+		font-weight: 500;
+	}
+}

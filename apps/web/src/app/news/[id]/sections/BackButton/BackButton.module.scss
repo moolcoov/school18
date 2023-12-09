@@ -19,6 +19,10 @@
 		font-size: 1.7rem;
 		font-weight: 500;
 		line-height: 2rem;
+
+		@media (width <= 768px) {
+			font-size: 1.5rem;
+		}
 	}
 
 	@media (width <= 768px) {

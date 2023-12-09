@@ -138,7 +138,7 @@ export function Gallery({ images }: { images: VkWallGetPostAttachmentPhoto[] }):
 			{images.length > 1 ? (
 				<div className={styles.gallery__bullets__wrapper}>
 					<div
-						className={styles.gallery__bullets}
+						className={cn(styles.gallery__bullets, { [styles.gallery__bullets_few]: images.length <= 5 })}
 						style={images.length > 5 ? { left: getBulletsOffset(index, images.length) } : undefined}
 					>
 						{[...Array<number>(images.length)].map((s, i) => (
