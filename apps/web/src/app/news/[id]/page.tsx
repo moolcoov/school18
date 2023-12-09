@@ -16,6 +16,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
 	const postResponse: VkWallGetResponse = await VkWallGetById({ id: params.id });
+	// @ts-expect-error vkwall
 	const post: VkWallGetPost | undefined = postResponse.response.items.at(0);
 
 	if (!post) {

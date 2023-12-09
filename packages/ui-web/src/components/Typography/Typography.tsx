@@ -3,12 +3,18 @@ import cn from "classnames";
 import styles from "./Typography.module.scss";
 
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
-	level: 1 | 2 | "tiny";
+	level: "page" | 1 | 2 | "tiny";
 	// children?: string | JSX.Element | JSX.Element[];
 }
 
 export function Heading({ level, children, className, ...props }: HeadingProps): JSX.Element {
 	switch (level) {
+		case "page":
+			return (
+				<h1 className={cn(styles.heading_page, className)} {...props}>
+					{children}
+				</h1>
+			);
 		case 1:
 			return (
 				<h1 className={cn(styles.heading_1, className)} {...props}>

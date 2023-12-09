@@ -37,12 +37,15 @@ body {
 
 	padding: 0 var(--spacing-l);
 
+	padding-bottom: calc(var(--spacing-l) + env(safe-area-inset-bottom));
+
 	@media (width <= 768px) {
 		gap: var(--spacing-xxs);
 	}
 
 	@media (width <= 425px) {
 		padding: 0 var(--spacing-s);
+		padding-bottom: calc(var(--spacing-s) + env(safe-area-inset-bottom));
 	}
 }
 
@@ -83,4 +86,16 @@ body {
 	height: 1px;
 
 	background: var(--color-accent-3);
+}
+
+.page-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: var(--spacing-xxl) 0;
+
+	@media (width <= 425px) {
+		padding: var(--spacing-xl) 0;
+	}
 }

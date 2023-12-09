@@ -1,0 +1,22 @@
+.news {
+	display: flex;
+	gap: var(--spacing-xxl);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+
+		max-width: 79rem;
+		gap: var(--spacing-m);
+
+		@media (width <= 768px) {
+			gap: var(--spacing-s);
+		}
+	}
+
+	@media (width <= 768px) {
+		flex-direction: column;
+	}
+}

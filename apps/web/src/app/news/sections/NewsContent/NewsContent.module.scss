@@ -1,0 +1,15 @@
+.posts {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+	
+	width: 100%;
+
+	@media (width <= 768px) {
+		gap: var(--spacing-l);
+	}
+
+	@media (width <= 425px) {
+		gap: var(--spacing-m);
+	}
+}

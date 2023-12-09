@@ -29,6 +29,11 @@
 		flex: 1;
 
 		max-width: 38rem;
+
+		@media (width > 768px) {
+			position: sticky;
+			top: var(--spacing-l);
+		}
 	}
 
 	&__main-content {

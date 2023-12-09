@@ -6,7 +6,7 @@ import styles from "../News.module.scss";
 export function NewsItem({ post }: { post: VkWallGetPost }): JSX.Element {
 	const image = getImage(post.attachments, post.copy_history);
 	const imageUrl = getImageSize(image)?.url;
-	const text = getText(post.text, Boolean(imageUrl));
+	const text = getText(post.text, Boolean(imageUrl), post.copy_history);
 	const id = `${post.from_id}_${post.id}`;
 
 	const date = moment(post.date * 1000);
@@ -46,9 +46,19 @@ export function NewsItem({ post }: { post: VkWallGetPost }): JSX.Element {
 	);
 }
 
-function getText(postText: string, hasImage: boolean): string {
+function getText(postText: string, hasImage: boolean, copyHistory?: VkWallGetPost[]): string {
+	let text = "";
+
 	if (postText) {
-		return postText;
+		text += postText;
+	}
+
+	if (copyHistory?.at(0)) {
+		text += copyHistory.at(0)?.text;
+	}
+
+	if (text !== "") {
+		return text;
 	}
 
 	if (hasImage) {

@@ -1,5 +1,5 @@
 interface VkWallGetResponse {
-	response: {
+	response?: {
 		count: number;
 		items: VkWallGetPost[];
 		groups?: VkWallGetPostGroups;
@@ -50,10 +50,12 @@ interface VkWallGetPost {
 	copy_history?: VkWallGetPost[];
 }
 
-type VkWallGetPostAttachments = VkWallGetPostAttachmentPhoto[];
+type VkWallGetPostAttachments = VkWallGetPostAttachment[];
+
+type VkWallGetPostAttachment = VkWallGetPostAttachmentPhoto | VkWallGetPostAttachmentVideo;
 
 interface VkWallGetPostAttachmentPhoto {
-	type: "photo" | "video";
+	type: "photo";
 	photo: {
 		album_id: number;
 		date: number;
@@ -73,6 +75,31 @@ interface VkWallGetPostAttachmentPhotoSize {
 	type: string;
 	width: number;
 	url: string;
+}
+
+interface VkWallGetPostAttachmentVideo {
+	type: "video";
+	video: {
+		access_key: string;
+		comments: number;
+		date: number;
+		description: string;
+		duration: number;
+		width: number;
+		height: number;
+		id: number;
+		owner_id: number;
+		title: string;
+		is_favorite: boolean;
+		track_code: string;
+		type: "video";
+		views: number;
+		local_views: number;
+		can_dislike: number;
+
+		image: unknown;
+		first_frame: unknown;
+	};
 }
 
 type VkWallGetPostGroups = VkWallGetPostGroup[];

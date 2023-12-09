@@ -7,7 +7,7 @@ import { VkWallGetById } from "@/lib/vk";
 
 export async function PostInfo({ postId }: { postId: string }): Promise<JSX.Element> {
 	const postResponse: VkWallGetResponse = await VkWallGetById({ id: postId });
-	const groups = postResponse.response.groups;
+	const groups = postResponse.response?.groups;
 
 	if (!groups) {
 		notFound();

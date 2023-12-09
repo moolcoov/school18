@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./PostMeta.module.scss";
 
 export function PostMeta({ group, postDate }: { group?: VkWallGetPostGroup; postDate: number }): JSX.Element {
-	const date = moment(postDate * 1000);
+	const date = moment(postDate * 1000).utcOffset("+8:00");
 
 	return (
 		<div className={styles.meta}>

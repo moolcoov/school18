@@ -124,6 +124,10 @@
 
 		padding: var(--spacing-s, 0.8rem) var(--spacing-l, 1.6rem);
 
+		transition: border-color 0.2s ease;
+
+		border: 1px solid transparent;
+
 		border-radius: 9999px;
 
 		&_icon {
@@ -141,7 +145,9 @@
 
 		&:hover {
 			opacity: 1;
-			background-color: var(--color-accent-3);
+
+			border-color: var(--color-accent-3);
+			background-color: var(--color-background-300);
 		}
 	}
 

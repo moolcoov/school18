@@ -1,12 +1,7 @@
-"use client";
+import moment from "moment";
 
 export function InfoTime(): JSX.Element {
-	const date = new Date();
-	const time = date.toLocaleTimeString().split(":");
+	const date = moment().utcOffset("+8:00");
 
-	return (
-		<div>
-			{time[0]}:{time[1]}
-		</div>
-	);
+	return <div>{date.format("H:mm")}</div>;
 }

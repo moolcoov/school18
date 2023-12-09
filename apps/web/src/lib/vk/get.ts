@@ -1,10 +1,13 @@
-export async function VkWallGet(params: { count?: number; offset?: number }): Promise<VkWallGetResponse> {
-	const { count = 10, offset = 0 } = params;
+export async function VkWallGet(params?: { count?: number; offset?: number }): Promise<VkWallGetResponse> {
+	const { count = 10, offset = 0 } = params ?? {};
 	const res: Response = await fetch(
 		`https://api.vk.com/method/wall.get?v=${process.env["VK.API_VERSION"]}&domain=school18bratsk&count=${count}&offset=${offset}`,
 		{
 			headers: { Authorization: `Bearer ${process.env["VK.ACCESS_TOKEN"] ?? ""}` },
-			cache: "no-cache",
+			next: {
+				revalidate: 300,
+				tags: ["news"],
+			},
 		},
 	);
 	if (!res.ok) {
@@ -32,3 +35,7 @@ export async function VkWallGetById(params: { id: string }): Promise<VkWallGetRe
 	const data: VkWallGetResponse = await res.json();
 	return data;
 }
+
+// await new Promise((r) => {
+// 	setTimeout(r, 22);
+// });
