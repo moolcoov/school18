@@ -1,3 +1,6 @@
+"use client";
+
+import "moment/locale/ru";
 import cn from "classnames";
 import Image from "next/image";
 import moment from "moment";
@@ -19,11 +22,18 @@ export function PostCard({ post }: { post: VkWallGetPost }): JSX.Element {
 	const text = getText(post.text, Boolean(imageSize), post.copy_history);
 
 	return (
-		<Link href={`/news/${post.from_id}_${post.id}` as Route}>
+		<Link href={`/news/${post.from_id}_${post.id}` as Route} id={post.id.toString()}>
 			<div className={cn(styles.card, styles[`card_${imageType}`], { [styles.card_pinned]: isPinned })}>
 				{imageSize ? (
 					<div className={cn(styles.card__image, styles[`card__image_${imageType}`])}>
-						<Image alt={post.text} fill quality={100} src={imageSize.url} />
+						<Image
+							alt={post.text}
+							fill
+							id={post.id.toString()}
+							key={post.id}
+							quality={100}
+							src={imageSize.url}
+						/>
 					</div>
 				) : null}
 				<div className={styles.card__info}>

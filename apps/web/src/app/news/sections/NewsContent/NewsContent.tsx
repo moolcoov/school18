@@ -10,7 +10,7 @@ export function NewsContent({ posts }: { posts: VkWallGetPost[] | undefined }): 
 	return (
 		<div className={styles.posts}>
 			{[...posts].map((post) => (
-				<PostCard key={post.id} post={post} />
+				<PostCard key={`${post.owner_id}_${post.id}`} post={post} />
 			))}
 		</div>
 	);
