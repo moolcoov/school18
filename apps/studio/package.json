@@ -18,7 +18,7 @@
 		"@sanity/color-input": "^3.1.0",
 		"@sanity/icons": "^2.7.0",
 		"@sanity/orderable-document-list": "^1.1.0",
-		"@sanity/vision": "^3.19.2",
+		"@sanity/vision": "^3.21.1",
 		"react": "latest",
 		"react-dom": "latest",
 		"react-is": "^18.2.0",
