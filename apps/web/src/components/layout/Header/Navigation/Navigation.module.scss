@@ -122,6 +122,8 @@
 	&_desktop {
 		justify-content: center;
 
+		height: 3.9rem;
+
 		padding: var(--spacing-s, 0.8rem) var(--spacing-l, 1.6rem);
 
 		transition: border-color 0.2s ease;
@@ -132,14 +134,14 @@
 
 		&_icon {
 			width: 3.9rem;
-			height: 3.9rem;
+
 			padding: var(--spacing-s, 0.8rem) var(--spacing-s, 0.8rem);
 		}
 
 		span {
 			text-align: center;
 
-			font-size: 1.7rem;
+			font-size: 1.6rem;
 			font-weight: 500;
 		}
 

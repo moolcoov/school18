@@ -3,7 +3,7 @@ import "moment/locale/ru";
 import "react-loading-skeleton/dist/skeleton.css";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import { inter, montserrat } from "utils";
+import { inter, montserrat, geist } from "utils";
 import { SkeletonTheme } from "react-loading-skeleton";
 import { ThemeContextProvider } from "@/contexts";
 import { Header } from "@/components/layout/Header";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
 	return (
-		<html className={`${inter.variable} ${montserrat.variable}`} lang="ru" suppressHydrationWarning>
+		<html className={`${inter.variable} ${montserrat.variable} ${geist.variable}`} lang="ru" suppressHydrationWarning>
 			<body>
 				<ThemeContextProvider>
 					<SkeletonTheme

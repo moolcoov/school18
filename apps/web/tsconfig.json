@@ -9,6 +9,6 @@
 			"@/lib/*": ["./src/lib/*"]
 		}
 	},
-	"include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "src/app/docs/layout.tsx'"],
 	"exclude": ["node_modules"]
 }

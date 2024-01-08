@@ -14,5 +14,6 @@ export const structure = (S: StructureBuilder, context: StructureResolverContext
 				S,
 				context,
 			}),
+			S.documentTypeListItem("doc"),
 		]);
 };

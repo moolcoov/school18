@@ -3,6 +3,7 @@ import "server-only";
 import type { QueryParams } from "@sanity/client";
 import { draftMode } from "next/headers";
 import { client } from "./sanity.client";
+import { isProduction } from "./sanity.api";
 
 export const token = process.env.SANITY_API_READ_TOKEN;
 
@@ -25,7 +26,7 @@ export async function sanityFetch<QueryResponse>({
 
 	const sanityClient = client.config().useCdn && isDraftMode ? client.withConfig({ useCdn: false }) : client;
 	const res: QueryResponse = await sanityClient.fetch<QueryResponse>(query, params, {
-		cache: "force-cache",
+		cache: isProduction ? "force-cache" : "no-store",
 		...(isDraftMode && {
 			cache: undefined,
 			token,

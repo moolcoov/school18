@@ -39,3 +39,13 @@ interface SanityProject {
 		icon?: SanityDefColor;
 	};
 }
+
+interface SanityDoc {
+	seo: {
+		title: string;
+		description?: string;
+		slug: { current: string };
+	};
+	content?: TypedObject[];
+	children?: SanityDoc[];
+}
