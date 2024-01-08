@@ -4,8 +4,8 @@ export async function VkWallGet(params?: { count?: number; offset?: number }): P
 		`https://api.vk.com/method/wall.get?v=${process.env["VK.API_VERSION"]}&domain=school18bratsk&count=${count}&offset=${offset}`,
 		{
 			headers: { Authorization: `Bearer ${process.env["VK.ACCESS_TOKEN"] ?? ""}` },
+			cache: "no-cache",
 			next: {
-				revalidate: 300,
 				tags: ["news"],
 			},
 		},

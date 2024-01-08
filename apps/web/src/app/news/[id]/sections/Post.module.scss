@@ -32,7 +32,7 @@
 
 		@media (width > 768px) {
 			position: sticky;
-			top: var(--spacing-l);
+			top: calc(6.4rem + var(--spacing-l));
 		}
 	}
 

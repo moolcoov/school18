@@ -1,6 +1,6 @@
 .info {
 	position: sticky;
-	top: var(--spacing-m);
+	top: calc(6.4rem + var(--spacing-m));
 
 	display: flex;
 	flex-direction: column;

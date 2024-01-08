@@ -35,9 +35,9 @@ const tabs: Tab[] = [
 		hasIcon: "mobile",
 	},
 	{
-		title: "О школе",
+		title: "Документы",
 		icon: <IconInfo size={23} />,
-		href: "/about",
+		href: "/docs",
 		hasIcon: "mobile",
 	},
 	{

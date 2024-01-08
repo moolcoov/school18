@@ -52,5 +52,7 @@ module.exports = {
 		"import/no-extraneous-dependencies": 0,
 		"turbo/no-undeclared-env-vars": 0,
 		"@typescript-eslint/require-await": 0,
+		"@typescript-eslint/no-unsafe-argument": 0,
+		"@typescript-eslint/no-unsafe-member-access": 0,
 	},
 };

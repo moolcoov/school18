@@ -14,6 +14,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "**.userapi.com",
 			},
+			{
+				protocol: "https",
+				hostname: "vk.com",
+			},
 		],
 	},
 };

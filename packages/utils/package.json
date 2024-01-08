@@ -8,7 +8,8 @@
 		"lint": "eslint \"**/*.ts*\""
 	},
 	"dependencies": {
-		"next": "latest"
+		"next": "latest",
+		"geist": "latest"
 	},
 	"devDependencies": {
 		"@types/react": "latest",

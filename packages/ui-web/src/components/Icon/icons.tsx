@@ -93,6 +93,29 @@ export function IconCheck({ size }: IconProps): JSX.Element {
 	);
 }
 
+// Arrows
+// - Default
+export function IconChevronLeft({ size }: IconProps): JSX.Element {
+	return (
+		<svg fill="none" height={size} viewBox="0 0 14 14" width={size} xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M4.00054 7.1869C4.00269 7.38614 4.07709 7.55781 4.23479 7.70969L8.79845 12.1806C8.93134 12.3087 9.08977 12.373 9.28114 12.373C9.65801 12.373 9.96094 12.077 9.96094 11.6964C9.96094 11.5109 9.88547 11.3392 9.75481 11.2059L5.63472 7.188L9.75481 3.16795C9.88442 3.03565 9.96094 2.86775 9.96094 2.67635C9.96094 2.2968 9.65801 1.99975 9.28114 1.99975C9.09188 1.99975 8.93134 2.06405 8.79845 2.19695L4.23479 6.66415C4.07604 6.82085 4.00054 6.98875 4.00054 7.1869Z"
+				fill={fillPrimary}
+			/>
+		</svg>
+	);
+}
+export function IconChevronRight({ size }: IconProps): JSX.Element {
+	return (
+		<svg fill="none" height={size} viewBox="0 0 14 14" width={size} xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M9.9604 7.18615C9.95825 6.98691 9.88385 6.81524 9.72615 6.66336L5.16249 2.19242C5.0296 2.06434 4.87116 2 4.6798 2C4.30293 2 4 2.29601 4 2.67664C4 2.86214 4.07547 3.03382 4.20613 3.16718L8.32621 7.18505L4.20613 11.2051C4.07652 11.3374 4 11.5053 4 11.6967C4 12.0763 4.30293 12.3733 4.6798 12.3733C4.86905 12.3733 5.0296 12.309 5.16249 12.1761L9.72615 7.7089C9.8849 7.5522 9.9604 7.3843 9.9604 7.18615Z"
+				fill={fillPrimary}
+			/>
+		</svg>
+	);
+}
+// - Circle
 export function IconChevronRightCircle({ size }: IconProps): JSX.Element {
 	return (
 		<svg fill="none" height={size} viewBox="0 0 25 25" width={size} xmlns="http://www.w3.org/2000/svg">

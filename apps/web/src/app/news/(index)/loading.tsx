@@ -1,5 +1,5 @@
 import { Heading } from "ui";
-import { NewsFallback } from "./sections/News/News.fallback";
+import { NewsFallback } from "./sections/News";
 
 export default function NewsPageLoading(): JSX.Element {
 	return (
