@@ -18,6 +18,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "vk.com",
 			},
+			{
+				protocol: "https",
+				hostname: "cdn.sanity.io",
+			},
 		],
 	},
 };

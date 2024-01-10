@@ -1,53 +1,60 @@
 import type { ImageUrlBuilder } from "sanity";
-import Image from "next/image";
+import { Heading, IconChevronRightCircle } from "ui";
 import type { CSSProperties } from "react";
-import { Heading } from "ui";
+import Link from "next/link";
+import Image from "next/image";
+import type { Route } from "next";
+import cn from "classnames";
 import styles from "./Projects.module.scss";
 import { urlFor } from "@/lib/sanity/sanity.image";
 
-interface ProjectCardProps {
-	title: string;
-	description?: string;
-	icon?: SanityDefImage;
-	colors?: SanityProject["colors"];
-}
+export function ProjectCard({ slug, card }: SanityProject): JSX.Element {
+	const { title, description, image, rows, cols, infoBlock } = card;
 
-export function ProjectCard({ title, description, icon, colors }: ProjectCardProps): JSX.Element {
-	const iconImage: ImageUrlBuilder | undefined = icon ? urlFor(icon) : undefined;
+	const cardImage: ImageUrlBuilder | undefined = image ? urlFor(image) : undefined;
+	const cardType = getCardType(card);
 
 	return (
 		<div
-			className={styles.card}
+			className={cn(styles.card, styles[`card_${cardType}`])}
+			data-card-type={cardType}
+			data-info-pos={infoBlock}
 			style={
 				{
-					"--color-pcard-accent":
-						colors?.accent &&
-						`rgba(${colors.accent.rgb.r}, ${colors.accent.rgb.g}, ${colors.accent.rgb.b}, ${colors.accent.rgb.a})`,
-					"--color-pcard-background":
-						colors?.background &&
-						`rgba(${colors.background.rgb.r}, ${colors.background.rgb.g}, ${colors.background.rgb.b}, ${colors.background.rgb.a})`,
-					"--color-pcard-description":
-						colors?.description &&
-						`rgba(${colors.description.rgb.r}, ${colors.description.rgb.g}, ${colors.description.rgb.b}, ${colors.description.rgb.a})`,
-					"--color-pcard-icon":
-						colors?.icon &&
-						`rgba(${colors.icon.rgb.r}, ${colors.icon.rgb.g}, ${colors.icon.rgb.b}, ${colors.icon.rgb.a})`,
+					"--card-rows": rows,
+					"--card-cols": cols,
 				} as CSSProperties
 			}
 		>
-			{iconImage ? (
-				<div className={styles.card__icon}>
-					<span>
-						<Image alt={title} height={30} src={iconImage.url()} width={30} />
-					</span>
-				</div>
-			) : null}
+			<Link className={styles.card__link} href={`/projects/${slug.current}` as Route} />
 			<div className={styles.card__info}>
-				<Heading className={styles.card__title} level={1}>
+				<Heading className={styles.card__title} level={2}>
 					{title}
 				</Heading>
 				{description ? <p className={styles.card__description}>{description}</p> : null}
 			</div>
+			{cardImage ? (
+				<div className={styles.card__image}>
+					<Image alt={title} fill quality={100} src={cardImage.url()} />
+				</div>
+			) : null}
+			<div className={styles.card__arrow}>
+				<IconChevronRightCircle size={28} />
+			</div>
 		</div>
 	);
+}
+
+function getCardType({ rows, cols, infoBlock }: SanityProject["card"]): "column" | "row" {
+	if (rows > cols) {
+		return "column";
+	} else if (cols > rows) {
+		return "row";
+	}
+
+	if (infoBlock === "up") {
+		return "row";
+	}
+
+	return "column";
 }

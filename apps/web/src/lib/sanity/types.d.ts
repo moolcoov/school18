@@ -29,14 +29,17 @@ interface SanityDefColor {
 
 interface SanityProject {
 	_id: string;
-	title: string;
-	description?: string;
-	icon?: SanityDefImage;
-	colors?: {
-		accent?: SanityDefColor;
-		background?: SanityDefColor;
-		description?: SanityDefColor;
-		icon?: SanityDefColor;
+	slug: {
+		current: string;
+		_type: "slug";
+	};
+	card: {
+		title: string;
+		image?: SanityDefImage;
+		description?: string;
+		infoBlock: "up" | "down";
+		cols: 1 | 2 | 3;
+		rows: 1 | 2;
 	};
 }
 
