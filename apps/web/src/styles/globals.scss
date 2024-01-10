@@ -64,20 +64,20 @@ body {
 	flex-direction: column;
 
 	width: 100%;
-	gap: var(--spacing-xxl);
+	gap: var(--spacing-xxxxl);
 
 	@media (width <= 768px) {
-		gap: var(--spacing-xl);
+		gap: var(--spacing-xxl);
 	}
 }
 
 .section {
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacing-l);
+	gap: var(--spacing-xxl);
 
 	@media (width <= 768px) {
-		gap: var(--spacing-m);
+		gap: var(--spacing-l);
 	}
 }
 
