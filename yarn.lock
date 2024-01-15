@@ -2304,10 +2304,10 @@
     lodash "^4.17.21"
     object-inspect "^1.6.0"
 
-"@sanity/table@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@sanity/table/-/table-1.0.1.tgz#f26d3c0d0d73888dcac5a0b8f1ef458533a5f696"
-  integrity sha512-QeqTW6MAOS9FElIqV766yArhYVxeiWVYy8LvPlRbLzIfRVBhOm8sDTFQdULK6DuBMIMdV9vVZNRsHS5hHXfr9Q==
+"@sanity/table@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@sanity/table/-/table-1.1.0.tgz#3c416cd13107e3f6f15292440dc5aa496207972d"
+  integrity sha512-AcMGYyt/lNT1yS6+tQTs1TUCZxw2kcF5o9bL04FZI7MMgRslLV46yYYCB9hBiT9Mie1H0Lb356ZhNydZfMa+gQ==
   dependencies:
     "@sanity/icons" "^2.0.0"
     "@sanity/incompatible-plugin" "^1.0.4"
