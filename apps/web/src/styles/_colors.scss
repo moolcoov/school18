@@ -3,7 +3,7 @@
 :root {
 	// carbonado
 	--color-hue-carborado-0: #ffffff;
-	--color-hue-carborado-50: #f7f7f7;
+	--color-hue-carborado-50: #fcfcfc;
 	--color-hue-carborado-100: #eff3ff;
 	--color-hue-carborado-150: #ededed;
 	--color-hue-carborado-200: #d6d6d6;
@@ -127,7 +127,7 @@
 	--color-text-300: var(--color-hue-carborado-400);
 
 	// Background
-	--color-background-100: var(--color-hue-carborado-0);
+	--color-background-100: var(--color-hue-carborado-50);
 	--color-background-200: var(--color-hue-carborado-0);
 	--color-background-300: var(--color-hue-carborado-100);
 	--color-background-400: var(--color-hue-carborado-150);

@@ -7,6 +7,7 @@ import { inter, montserrat, geist } from "utils";
 import { SkeletonTheme } from "react-loading-skeleton";
 import { ThemeContextProvider } from "@/contexts";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
 	title: {
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
 						<div className="page">
 							<Header />
 							{children}
+							<Footer />
 						</div>
 					</SkeletonTheme>
 				</ThemeContextProvider>
