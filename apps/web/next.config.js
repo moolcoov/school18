@@ -4,10 +4,6 @@ const nextConfig = {
 
 	transpilePackages: ["ui", "utils"],
 
-	experimental: {
-		typedRoutes: true,
-	},
-
 	images: {
 		remotePatterns: [
 			{
