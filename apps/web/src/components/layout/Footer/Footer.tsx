@@ -8,7 +8,7 @@ export function Footer(): JSX.Element {
 			<div className={styles.footer__top}>
 				<div>
 					<svg width="165" height="41" viewBox="0 0 165 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_2087_2167)">
+						<g clipPath="url(#clip0_2087_2167)">
 							<path
 								d="M27.669 0H12.7703C5.71746 0 0 5.71823 0 12.772V27.6727C0 34.7265 5.71746 40.4448 12.7703 40.4448H27.669C34.7218 40.4448 40.4393 34.7265 40.4393 27.6727V12.772C40.4393 5.71823 34.7218 0 27.669 0Z"
 								fill="var(--color-primary)"
@@ -32,7 +32,7 @@ export function Footer(): JSX.Element {
 				<div className={styles.footer__top__nav}>
 					<div className={styles.footer__links}>
 						<Link href={"/news"}>Новости</Link>
-						<Link href={"/projects"}>Проекты</Link>
+						<Link href={"/"}>Проекты</Link>
 						<Link href={"/docs/about/general"}>Сведения об ОО</Link>
 						<Link href={"/docs"}>Документы</Link>
 						<Link href={"/"}>Контакты</Link>
