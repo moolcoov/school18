@@ -2223,10 +2223,10 @@
     debug "^3.2.7"
     lodash "^4.17.21"
 
-"@sanity/orderable-document-list@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@sanity/orderable-document-list/-/orderable-document-list-1.1.0.tgz#547c36e99d95571d169af8cb3a7ba9123621cd7b"
-  integrity sha512-8YUWEh7A0yZicawrXyhqvXZdTui6r4GZpqRYcxK4plhYr1rT9AmUdVlJ6sR/wOGt+62aUsi26PgRJEbgj/+Hww==
+"@sanity/orderable-document-list@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@sanity/orderable-document-list/-/orderable-document-list-1.2.1.tgz#2665f40f6405904761a7e215b4b877704b3e3106"
+  integrity sha512-ZjbNuAI9TUbc+q3HbKjC1S43ywXwv5Ft1GihyBmIOeIl9wiTT9T8E543VuvIU0IcBGOGNUHag7IIs03TdcqWLQ==
   dependencies:
     "@hello-pangea/dnd" "^16.2.0"
     "@sanity/icons" "^2.4.1"
