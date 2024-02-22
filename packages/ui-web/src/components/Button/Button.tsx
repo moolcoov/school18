@@ -7,9 +7,8 @@ import type { Route } from "next";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
-	buttonType?: "action" | "navigation";
-	variant?: "primary" | "secondary" | "transparent";
-	align?: "left" | "center" | "right";
+	variant?: "primary" | "secondary" | "transparent" | "text";
+	size?: "l" | "m" | "s";
 	icon?: React.ReactNode;
 	label?: string;
 	href?: string | UrlObject;
@@ -23,9 +22,8 @@ interface ButtonProps {
 
 export function Button(props: ButtonProps): JSX.Element {
 	const {
-		buttonType = "action",
 		variant = "primary",
-		align = "center",
+		size = "l",
 		icon,
 		label = "",
 		href,
@@ -33,15 +31,15 @@ export function Button(props: ButtonProps): JSX.Element {
 		onClick,
 		className,
 		children,
-		type,
+		type = "button",
 		linkComponent = Link,
 	}: ButtonProps = props;
 
 	const LinkComponent = linkComponent;
 
 	const buttonStyles = useMemo(
-		() => cn(styles.button, styles[`button_${buttonType}`], styles[`button_${variant}`], styles[`button_${align}`]),
-		[buttonType, variant, align],
+		() => cn(styles.button, styles[`button_${variant}`], styles[`button_${size}`]),
+		[size, variant],
 	);
 
 	if (typeof href !== "undefined") {

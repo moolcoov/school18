@@ -11,7 +11,7 @@ export async function Projects(): Promise<JSX.Element> {
 	});
 
 	return (
-		<div className="section">
+		<div className="section wrapper">
 			<Heading level={1}>Наши проекты</Heading>
 			<div className={styles.projects}>
 				{projects.map((project: SanityProject) => (

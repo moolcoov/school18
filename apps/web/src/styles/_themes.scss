@@ -1,9 +1,11 @@
 @mixin dark {
+	--hero-brightness: 0.5;
 	color-scheme: dark;
 	@include dark-colors;
 }
 
 @mixin light {
+	--hero-brightness: 0.9;
 	color-scheme: light;
 	@include light-colors;
 }

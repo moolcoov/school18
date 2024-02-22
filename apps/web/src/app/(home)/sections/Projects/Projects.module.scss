@@ -7,7 +7,9 @@
 	gap: var(--spacing-xxl);
 
 	@media (width <= 768px) {
-		gap: var(--spacing-s);
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-m);
 	}
 }
 
@@ -62,6 +64,8 @@
 
 		@media (width <= 425px) {
 			gap: var(--spacing-xxs, 0.4rem);
+
+			padding: var(--spacing-l) var(--spacing-xl);
 		}
 	}
 
@@ -87,7 +91,7 @@
 	}
 
 	&__description {
-		color: var(--dark-text-100, #aaaaaa);
+		color: var(--color-text-100, #aaaaaa);
 
 		font-family: var(--font-geist);
 		font-size: 1.5rem;
@@ -128,15 +132,24 @@
 	&[data-info-pos="up"] &__arrow {
 		bottom: var(--spacing-xl);
 		left: var(--spacing-xxl);
+
+		@media (width <= 425px) {
+			bottom: var(--spacing-l);
+			left: var(--spacing-xl);
+		}
 	}
 
 	&[data-info-pos="down"] &__arrow {
 		right: var(--spacing-xxl);
 		bottom: var(--spacing-xl);
+
+		@media (width <= 425px) {
+			right: var(--spacing-xl);
+			bottom: var(--spacing-l);
+		}
 	}
 
-	@media (width <= 425px) {
-		height: 11rem;
-		padding: var(--spacing-l, 1.6rem);
+	@media (width <= 768px) {
+		height: 26.5rem;
 	}
 }

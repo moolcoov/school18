@@ -11,9 +11,7 @@ export default function Home(): JSX.Element {
 				<Hero />
 				<Sidebar />
 			</div>
-			<div className="wrapper">
-				<Projects />
-			</div>
+			<Projects />
 		</div>
 	);
 }

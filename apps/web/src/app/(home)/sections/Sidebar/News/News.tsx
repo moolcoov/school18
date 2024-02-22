@@ -1,4 +1,4 @@
-import { Heading } from "ui";
+import { Button, Heading } from "ui";
 import cn from "classnames";
 import { Suspense } from "react";
 import sectionStyles from "../Sidebar.module.scss";
@@ -12,7 +12,8 @@ export function News(): JSX.Element {
 			<Suspense fallback={<NewsListFallback />}>
 				<NewsList />
 			</Suspense>
-			<div className="">Все новости</div>
+
+			<Button label="Все новости" size="m" variant="transparent" />
 		</div>
 	);
 }

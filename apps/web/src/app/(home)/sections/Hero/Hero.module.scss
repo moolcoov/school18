@@ -16,7 +16,7 @@
 	&__image {
 		user-select: none;
 
-		background: linear-gradient(0deg, rgb(18 18 18 / 60%) 0%, rgb(18 18 18 / 60%) 100%);
+		filter: brightness(var(--hero-brightness));
 
 		object-position: center;
 		object-fit: cover;

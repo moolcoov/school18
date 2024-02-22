@@ -3,6 +3,7 @@
 
 	align-items: center;
 
+	width: fit-content;
 	height: fit-content;
 
 	cursor: pointer;
@@ -13,29 +14,20 @@
 
 	border: none;
 
-	border-radius: var(--border-radius-ui);
+	border-radius: 9999px;
 
 	background-color: var(--button-background);
-
-	font: var(--text-def);
 
 	gap: var(--spacing-m);
 	fill: currentColor;
 
 	span {
 		background-color: transparent;
-	}
 
-	&_action {
-		padding: var(--spacing-xs, 6px) var(--spacing-m, 12px);
-	}
-
-	&_navigation {
-		padding: var(--spacing-xs, 6px) var(--spacing-l, 16px);
-
-		@media (width <= 768px) {
-			padding: var(--spacing-xs, 6px) var(--spacing-s, 16px);
-		}
+		font-family: var(--font-family-montserrat);
+		font-size: var(--button-font-size);
+		font-weight: var(--button-font-weight, 500);
+		line-height: var(--button-line-height, normal);
 	}
 
 	&:hover {
@@ -46,6 +38,26 @@
 
 	&:active {
 		background-color: var(--button-background-active);
+	}
+
+	// TODO small versions
+
+	&_l {
+		--button-font-size: 1.5rem;
+
+		padding: var(--spacing-s) var(--spacing-m);
+	}
+
+	&_m {
+		--button-font-size: 1.4rem;
+
+		padding: var(--spacing-xs) var(--spacing-m);
+	}
+
+	&_s {
+		--button-font-size: 1.3rem;
+
+		padding: var(--spacing-xs) var(--spacing-s);
 	}
 
 	&_primary {
@@ -69,16 +81,9 @@
 		--button-background-active: color-mix(in sRGB, var(--color-background-300), 30% transparent);
 	}
 
-	&_left {
-		justify-content: flex-start;
-	}
-
-	&_center {
-		justify-content: center;
-	}
-
-	&_right {
-		justify-content: flex-end;
+	&_text {
+		--button-color: var(--color-primary);
+		padding: var(--spacing-xxs);
 	}
 
 	@media (width <= 768px) {
