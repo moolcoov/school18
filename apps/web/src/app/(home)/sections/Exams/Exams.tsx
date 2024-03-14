@@ -159,12 +159,8 @@ export function Exams(): JSX.Element {
 								</div>
 								{estimated > 1 ? (
 									<p className={styles.exams__exam__counter}>
-										осталось {estimated} {getDayWordString(estimated)}
+										{getLeftString(estimated)} {estimated} {getDayWordString(estimated)}
 									</p>
-								) : null}
-								{estimated.toString().at(-1) === "1" &&
-								(estimated.toString().at(-2) ?? "") + (estimated.toString().at(-1) ?? "") !== "11" ? (
-									<p className={styles.exams__exam__counter}>остался {estimated} день</p>
 								) : null}
 								{estimated === 0 ? <p className={styles.exams__exam__counter}>экзамен сегодня 💀</p> : null}
 							</div>
@@ -224,4 +220,11 @@ function getDayWordString(days: number): string {
 	}
 
 	return "";
+}
+
+function getLeftString(days: number): string {
+	if (days.toString().at(-1) === "1" && (days.toString().at(-2) ?? "") + (days.toString().at(-1) ?? "") !== "11") {
+		return "остался";
+	}
+	return "осталось";
 }
