@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IconChevronRight } from "ui";
 import cn from "classnames";
 import styles from "./DocsPath.module.scss";
+import type { SanityDoc } from "@/lib/sanity";
 
 export function DocsPath({ path }: { path: (SanityDoc | undefined)[] }): JSX.Element {
 	let url = "/docs/";

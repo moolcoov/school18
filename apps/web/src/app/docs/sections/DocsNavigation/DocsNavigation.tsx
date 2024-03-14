@@ -3,6 +3,7 @@ import cn from "classnames";
 import styles from "./DocsNavigation.module.scss";
 import { DocButton } from "./DocButton";
 import { sanityFetch } from "@/lib/sanity/fetch";
+import type { SanityDoc } from "@/lib/sanity";
 
 export async function DocsNavigation(): Promise<JSX.Element> {
 	const documents: SanityDoc[] = await sanityFetch({ query: groq`*[_type=="doc"]`, tags: ["docs"] });

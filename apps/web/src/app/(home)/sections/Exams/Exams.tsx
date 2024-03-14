@@ -162,7 +162,10 @@ export function Exams(): JSX.Element {
 										осталось {estimated} {getDayWordString(estimated)}
 									</p>
 								) : null}
-								{estimated === 1 ? <p className={styles.exams__exam__counter}>остался 1 день</p> : null}
+								{estimated.toString().at(-1) === "1" &&
+								(estimated.toString().at(-2) ?? "") + (estimated.toString().at(-1) ?? "") !== "11" ? (
+									<p className={styles.exams__exam__counter}>остался {estimated} день</p>
+								) : null}
 								{estimated === 0 ? <p className={styles.exams__exam__counter}>экзамен сегодня 💀</p> : null}
 							</div>
 						);
