@@ -5,22 +5,22 @@ export default defineType({
 	type: "document",
 	name: "doc",
 	fields: [
-		defineField({
+		{
 			type: "object",
 			name: "seo",
 			title: "Page info",
 			fields: [
-				defineField({ type: "string", name: "title" }),
-				defineField({ type: "string", name: "description" }),
-				defineField({
+				{ type: "string", name: "title" },
+				{ type: "string", name: "description" },
+				{
 					type: "slug",
 					name: "slug",
 					options: { source: "seo.title", maxLength: 150 },
 					validation: (r) => r.required(),
-				}),
+				},
 			],
-		}),
-		defineField({
+		},
+		{
 			type: "array",
 			name: "content",
 			of: [
@@ -37,12 +37,12 @@ export default defineType({
 					of: [{ type: "table" }],
 				},
 			],
-		}),
-		defineField({
+		},
+		{
 			type: "array",
 			name: "children",
 			of: [{ type: "doc" }],
-		}),
+		},
 	],
 	preview: {
 		select: {

@@ -1,0 +1,23 @@
+.meta {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-5);
+
+	width: 35rem;
+
+	&__manager {
+		&__info {
+			display: flex;
+			flex-direction: column;
+			gap: var(--spacing-0\.5);
+		}
+
+		&__job {
+			font: var(--text-sm-geist-normal);
+		}
+
+		&__name {
+			font: var(--text-xl-montserrat-semibold);
+		}
+	}
+}

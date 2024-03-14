@@ -1,0 +1,64 @@
+.card {
+	display: flex;
+	flex-direction: column;
+
+	max-width: 345px;
+
+	padding: var(--spacing-6) var(--spacing-7);
+
+	border: 1px solid var(--color-accent-3);
+	border-radius: var(--rounded-2xl);
+	background-color: var(--color-background-200);
+	gap: var(--spacing-4);
+
+	&__image {
+		position: relative;
+
+		overflow: hidden;
+
+		width: 100%;
+		height: auto;
+
+		border: 1px solid var(--color-accent-3);
+		border-radius: var(--rounded-full);
+		aspect-ratio: 1/1;
+	}
+
+	&__info {
+		display: flex;
+
+		flex: 1;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		gap: var(--spacing-2);
+
+		&__title {
+			font: var(--text-2xl-montserrat-bold);
+		}
+
+		&__post {
+			color: var(--color-text-100);
+
+			font: var(--text-base-montserrat-medium);
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-wrap: wrap;
+
+		color: var(--color-text-100);
+
+		font: var(--text-sm-geist-medium);
+		gap: var(--spacing-2) var(--spacing-4);
+	}
+}
+
+.content {
+	display: grid;
+
+	grid-template-columns: repeat(3, 3fr);
+
+	gap: var(--spacing-9);
+}

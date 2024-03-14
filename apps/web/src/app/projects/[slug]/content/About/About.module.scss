@@ -1,0 +1,19 @@
+.about {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-5);
+
+	&__heading {
+		font: var(--text-3xl-montserrat-bold);
+	}
+
+	&__prose {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-3);
+
+		p {
+			font: var(--text-base-geist-normal);
+		}
+	}
+}

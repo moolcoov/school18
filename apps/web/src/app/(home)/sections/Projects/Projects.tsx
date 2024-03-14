@@ -2,7 +2,8 @@ import { groq } from "next-sanity";
 import { Heading } from "ui";
 import { ProjectCard } from "./ProjectCard";
 import styles from "./Projects.module.scss";
-import { sanityFetch } from "@/lib/sanity/sanity.fetch";
+import type { SanityProject } from "@/lib/sanity";
+import { sanityFetch } from "@/lib/sanity/fetch";
 
 export async function Projects(): Promise<JSX.Element> {
 	const projects: SanityProject[] = await sanityFetch<SanityProject[]>({

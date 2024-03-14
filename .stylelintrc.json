@@ -5,6 +5,7 @@
 		"indentation": "tab",
 		"color-hex-length": "long",
 		"value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
+		"custom-property-pattern": "(?:...)",
 		"at-rule-no-unknown": null,
 		"declaration-block-trailing-semicolon": null,
 		"no-descending-specificity": null

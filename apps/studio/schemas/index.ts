@@ -1,4 +1,7 @@
 import project from "./project";
-import doc from "./doc";
+import projectsCluster from "./projectsCluster";
 
-export const schemaTypes = [project, doc];
+import doc from "./doc";
+import employee from "./employee";
+
+export const schemaTypes = [project, projectsCluster, doc, employee];

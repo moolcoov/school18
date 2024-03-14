@@ -3,7 +3,8 @@ import { groq } from "next-sanity";
 import { notFound } from "next/navigation";
 import { DocsPath } from "../sections/DocsPath";
 import styles from "./Doc.module.scss";
-import { sanityFetch } from "@/lib/sanity/sanity.fetch";
+import { sanityFetch } from "@/lib/sanity/fetch";
+import type { SanityDoc } from "@/lib/sanity";
 
 export default async function DocsPage({ params }: { params: { slug?: string[] } }): Promise<JSX.Element> {
 	let doc: SanityDoc | undefined = await sanityFetch({
@@ -30,9 +31,7 @@ export default async function DocsPage({ params }: { params: { slug?: string[] }
 	return (
 		<article className={styles.doc}>
 			{path.length > 1 ? <DocsPath path={path} /> : null}
-			<div className="prose">
-				<PortableText value={doc.content} />
-			</div>
+			<div className="prose">{doc.content ? <PortableText value={doc.content} /> : null}</div>
 		</article>
 	);
 }

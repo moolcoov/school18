@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import cn from "classnames";
 import styles from "./DocsNavigation.module.scss";
 import { DocButton } from "./DocButton";
-import { sanityFetch } from "@/lib/sanity/sanity.fetch";
+import { sanityFetch } from "@/lib/sanity/fetch";
 
 export async function DocsNavigation(): Promise<JSX.Element> {
 	const documents: SanityDoc[] = await sanityFetch({ query: groq`*[_type=="doc"]`, tags: ["docs"] });

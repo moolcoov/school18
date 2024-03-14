@@ -1,0 +1,16 @@
+.project {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-12);
+
+	&__main {
+		display: flex;
+		gap: var(--spacing-8);
+
+		&__content {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+		}
+	}
+}

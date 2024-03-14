@@ -2,8 +2,8 @@ import "server-only";
 
 import type { QueryParams } from "@sanity/client";
 import { draftMode } from "next/headers";
-import { client } from "./sanity.client";
-import { isProduction } from "./sanity.api";
+import { client } from "./client";
+import { isProduction } from "./api";
 
 export const token = process.env.SANITY_API_READ_TOKEN;
 

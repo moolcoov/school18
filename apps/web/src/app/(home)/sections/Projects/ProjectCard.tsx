@@ -6,10 +6,11 @@ import Image from "next/image";
 import type { Route } from "next";
 import cn from "classnames";
 import styles from "./Projects.module.scss";
-import { urlFor } from "@/lib/sanity/sanity.image";
+import { urlFor } from "@/lib/sanity/image";
+import type { SanityProject } from "@/lib/sanity";
 
-export function ProjectCard({ slug, card }: SanityProject): JSX.Element {
-	const { title, description, image, rows, cols, infoBlock } = card;
+export function ProjectCard({ title, description, slug, card }: SanityProject): JSX.Element {
+	const { image, rows, cols, infoBlock } = card;
 
 	const cardImage: ImageUrlBuilder | undefined = image ? urlFor(image) : undefined;
 	const cardType = getCardType(card);
