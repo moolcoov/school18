@@ -14,6 +14,10 @@ export function NavigationMobile({ tabs }: { tabs: Tab[] }): JSX.Element {
 	const icons = tabs.filter((tab) => tab.group === "icon");
 	const others = tabs.filter((tab) => tab.group !== "icon");
 
+	if (typeof window !== "object") {
+		return <>{null}</>;
+	}
+
 	return (
 		<div className={styles.navigation_mobile}>
 			<button
