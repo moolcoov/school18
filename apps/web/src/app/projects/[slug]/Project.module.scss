@@ -12,5 +12,17 @@
 			flex: 1;
 			flex-direction: column;
 		}
+
+		@media (width <= 768px) {
+			flex-direction: column;
+		}
+
+		@media (width <= 425px) {
+			padding: 0 var(--spacing-4);
+		}
+	}
+
+	@media (width <= 425px) {
+		gap: var(--spacing-9);
 	}
 }

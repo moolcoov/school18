@@ -1,7 +1,7 @@
 import Link from "next/link";
 import cn from "classnames";
 import type { ReactNode } from "react";
-import { IconHome, IconInfo, IconMegaphone, IconPhotoStack, IconTelegram, IconVk } from "ui";
+import { IconHome, IconInfo, IconMegaphone, IconTelegram, IconVk } from "ui";
 import styles from "./Header.module.scss";
 import { NavigationDesktop, NavigationMobile } from "./Navigation";
 import { ThemeSwitcher } from "./ThemeSwitcher";
@@ -28,12 +28,12 @@ const tabs: Tab[] = [
 		href: "/news",
 		hasIcon: "mobile",
 	},
-	{
-		title: "Проекты",
-		icon: <IconPhotoStack size={23} />,
-		href: "/projects",
-		hasIcon: "mobile",
-	},
+	// {
+	// 	title: "Проекты",
+	// 	icon: <IconPhotoStack size={23} />,
+	// 	href: "/projects",
+	// 	hasIcon: "mobile",
+	// },
 	{
 		title: "Документы",
 		icon: <IconInfo size={23} />,

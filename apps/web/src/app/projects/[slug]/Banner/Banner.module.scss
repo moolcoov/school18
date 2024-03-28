@@ -31,10 +31,22 @@
 
 		&__title {
 			font: var(--text-5xl-montserrat-bold);
+
+			@media (width <= 425px) {
+				font: var(--text-4xl-montserrat-bold);
+			}
 		}
 
 		&__description {
 			font: var(--text-base-geist-normal);
+
+			@media (width <= 425px) {
+				font: var(--text-sm-geist-normal);
+			}
+		}
+
+		@media (width <= 425px) {
+			padding: var(--spacing-6) var(--spacing-7);
 		}
 	}
 

@@ -5,6 +5,10 @@
 
 	&__heading {
 		font: var(--text-3xl-montserrat-bold);
+
+		@media (width <= 425px) {
+			font: var(--text-2xl-montserrat-bold);
+		}
 	}
 
 	&__prose {

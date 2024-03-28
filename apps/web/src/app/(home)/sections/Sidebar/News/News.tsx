@@ -13,7 +13,9 @@ export function News(): JSX.Element {
 				<NewsList />
 			</Suspense>
 
-			<Button label="Все новости" size="m" variant="transparent" />
+			<div className={styles.news__button}>
+				<Button href="/news" label="Все новости" size="m" variant="transparent" />
+			</div>
 		</div>
 	);
 }

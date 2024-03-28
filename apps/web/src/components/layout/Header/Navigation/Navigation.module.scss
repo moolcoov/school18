@@ -94,6 +94,10 @@
 				background: var(--color-background-200, #171717);
 				gap: var(--spacing-m, 1.2rem);
 			}
+
+			@media (width > 768px) {
+				display: none;
+			}
 		}
 
 		@media (width > 768px) {

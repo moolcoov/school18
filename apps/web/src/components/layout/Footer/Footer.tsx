@@ -36,10 +36,10 @@ export function Footer(): JSX.Element {
 				<div className={styles.footer__top__nav}>
 					<div className={styles.footer__links}>
 						<Link href="/news">Новости</Link>
-						<Link href="/">Проекты</Link>
+						{/* <Link href="/">Проекты</Link> */}
 						<Link href="/docs/about/general">Сведения об ОО</Link>
 						<Link href="/docs">Документы</Link>
-						<Link href="/">Контакты</Link>
+						{/* <Link href="/">Контакты</Link> */}
 					</div>
 					<div className={styles.footer__links}>
 						<Link href="https://2gis.ru/bratsk/firm/7178140187100234" target="_blank">

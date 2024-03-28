@@ -2,6 +2,7 @@ import { PortableText } from "@portabletext/react";
 import { groq } from "next-sanity";
 import { notFound } from "next/navigation";
 import { DocsPath } from "../sections/DocsPath";
+import { DocsSeeMore } from "../sections/DocsSeeMore";
 import styles from "./Doc.module.scss";
 import { sanityFetch } from "@/lib/sanity/fetch";
 import type { SanityDoc } from "@/lib/sanity";
@@ -31,7 +32,12 @@ export default async function DocsPage({ params }: { params: { slug?: string[] }
 	return (
 		<article className={styles.doc}>
 			{path.length > 1 ? <DocsPath path={path} /> : null}
-			<div className="prose">{doc.content ? <PortableText value={doc.content} /> : null}</div>
+			{doc.content ? (
+				<div className="prose">
+					<PortableText value={doc.content} />
+				</div>
+			) : null}
+			<DocsSeeMore path={path} />
 		</article>
 	);
 }
